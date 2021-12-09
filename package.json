@@ -1,6 +1,6 @@
 {
   "name": "@owensdoug/observer-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "initialize": "npm install && npm run build",
     "remove-git-tags-local": "git tag -d $(git tag -l)",
