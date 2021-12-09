@@ -1,0 +1,27 @@
+{
+  "name": "@owensdoug/observer-ts",
+  "version": "0.0.1",
+  "scripts": {
+    "initialize": "npm install && npm run build",
+    "remove-git-tags-local": "git tag -d $(git tag -l)",
+    "version": "npm run beautify && npm run test && npm run git-add",
+    "commit": "git commit",
+    "post-version": "git push && git push --tags",
+    "bump": "npm version patch",
+    "publish": "npm publish",
+    "build": "tsc",
+    "git-add": "git add -A ./",
+    "beautify": "npm run pretty && npm run lint-fix",
+    "lint": "eslint --ext ./src/*.ts",
+    "lint-fix": "eslint --ext ./src/*.ts --fix",
+    "pretty": "prettier --write ./src/*.ts",
+    "test": ""
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
+  }
+}
