@@ -8,7 +8,7 @@
     "commit": "git commit",
     "post-version": "git push && git push --tags",
     "bump": "npm version patch",
-    "publish": "npm publish",
+    "publish": "npm publish --access=public",
     "build": "tsc",
     "git-add": "git add -A ./",
     "beautify": "npm run pretty && npm run lint-fix",

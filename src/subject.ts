@@ -5,19 +5,19 @@ interface Subject {
 }
 
 abstract class Subject implements Subject {
-  private _observers: Observer[] = [];
+  private _observers: Array<Observer> = new Array<Observer>();
 
-  subscribe(observer: Observer) {
+  subscribe(observer: Observer): void {
     this._observers.push(observer);
   }
 
-  unsubscribe(observer: Observer) {
+  unsubscribe(observer: Observer): void {
     this._observers = this._observers.filter((element) => {
       return observer.id === element.id;
     });
   }
 
-  notify() {
+  notify(): void {
     this._observers.forEach((observer) => {
       observer.update();
     });
